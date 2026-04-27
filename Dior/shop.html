@@ -1,0 +1,357 @@
+<!-- shop.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop | Dvr Fashion</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="shop.js"></script>
+</head>
+<body>
+  <header class="top-nav">
+    <nav class="navbar">
+      <ul class="nav-items">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="search.html"><i class="fas fa-search"></i> Search</a></li>
+        <li><a href="bag.html"><i class="fas fa-shopping-bag"></i> Bag</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="shop-container">
+    <h1 class="Explore-font">Explore Our Collection</h1>
+    <div class="shop-product-grid" id="productGrid">
+      <!-- Products will be injected here -->
+      <div class="product-card">
+        <img src="images/skirt.jpg" alt="Italian Denim Mini Skirt">
+        <h3>Italian Denim Mini Skirt</h3>
+        <p>$25.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <section class="featured-looks">
+    <section class="fashion-insider">
+        <h2 class="insider-heading">Fashion Insider</h2>
+        <nav class="insider-nav">
+          <ul>
+            <li><a href="#all-topics" class="active" onclick="showInsiderSection('all-topics', this)">All Topics</a></li>
+            <li><a href="#trends" onclick="showInsiderSection('trends', this)">Trends</a></li>
+            <li><a href="#insider" onclick="showInsiderSection('insider', this)">Insider</a></li>
+            <li><a href="#buy" onclick="showInsiderSection('buy', this)">What to Buy</a></li>
+            <li><a href="#fashion-shows" onclick="showInsiderSection('fashion-shows', this)">Fashion Shows</a></li>
+            <li><a href="#street-style" onclick="showInsiderSection('street-style', this)">Street Style</a></li>
+            <li><a href="#">What's New</a></li>
+          </ul>
+        </nav>
+
+        <!--All topics --> 
+        <section class="all-topics-section insider-section" id="all-topics" style="display: block;">
+          <h2 class="tab-headings">All Topics</h2>
+          <div class="topics-grid">
+            <div class="topic-card">
+              <h3>Latest Trends</h3>
+              <p>Discover the colors, cuts, and textures defining Fall 2025.</p>
+              <button>Explore</button>
+            </div>
+            <div class="topic-card">
+              <h3>Fashion News</h3>
+              <p>From runway debuts to brand launches—stay in the loop.</p>
+              <button>Explore</button>
+            </div>
+            <div class="topic-card">
+              <h3>Designers to Watch</h3>
+              <p>Meet the visionaries shaping India’s fashion future.</p>
+              <button>Explore</button>
+            </div>
+            <div class="topic-card">
+              <h3>Celebrities on Trend</h3>
+              <p>Red carpet to street style—see what stars are wearing.</p>
+              <button>Explore</button>
+            </div>
+          </div>
+            <div class="topics-row second-row">
+              <div class="topic-card">
+                <h3>Global Influence</h3>
+                <p>How Indian fashion is inspiring international runways.</p>
+                <button>Explore</button>
+              </div>
+              <div class="topic-card">
+                <h3>Gen Z Style</h3>
+                <p>Bold, expressive, and tech-savvy—fashion for the next gen.</p>
+                <button>Explore</button>
+              </div>
+            </div>
+        </section>
+        
+        <!-- Trends section -->
+        <section class="trends-section insider-section" id="trends" style="display: none;">
+          <h2 class="tab-headings">Latest Fashion Trends</h2>
+          <div class="trend-grid">
+            <div class="trend-card">
+              <img src="images/trend1.jpg" alt="Fall Color Palette">
+              <h3>Fall Color Palette</h3>
+              <p>Mustard, maroon, and chocolate brown dominate the season.</p>
+              <button>Explore Trend</button>
+            </div>
+            <div class="trend-card">
+              <img src="images/trend2.jpg" alt="Layered Silhouettes">
+              <h3>Layered Silhouettes</h3>
+              <p>Oversized coats and cropped jackets make bold statements.</p>
+              <button>Explore Trend</button>
+            </div>
+            <!-- Add more cards -->
+          </div>
+        </section>
+
+
+        <!--Insider section-->
+        <section class="insider-section insider-content" id="insider" style="display: none;">
+          <h2 class="tab-headings">Insider Picks & Stories</h2>
+          <div class="topics-grid">
+            <div class="topic-card">
+              <h3>Behind the Brand</h3>
+              <p>Explore the creative minds and stories behind your favorite labels.</p>
+              <button>Explore</button>
+            </div>
+            <div class="topic-card">
+              <h3>Stylist Secrets</h3>
+              <p>Tips from top stylists on how to elevate your everyday look.</p>
+              <button>Explore</button>
+            </div>
+            <div class="topic-card">
+              <h3>Fashion Week Diaries</h3>
+              <p>Insider access to backstage moments and runway prep.</p>
+              <button>Explore</button>
+            </div>
+            <div class="topic-card">
+              <h3>Designer Interviews</h3>
+              <p>Hear directly from the visionaries shaping fashion’s future.</p>
+              <button>Explore</button>
+            </div>
+          </div>
+          <div class="topics-row second-row">
+            <div class="topic-card">
+              <h3>Trend Forecasts</h3>
+              <p>What’s next in fashion? Our editors weigh in.</p>
+              <button>Explore</button>
+            </div>
+            <div class="topic-card">
+              <h3>Culture & Style</h3>
+              <p>How fashion intersects with art, music, and identity.</p>
+              <button>Explore</button>
+            </div>
+          </div>
+        </section>
+
+        <!--what to buy section-->
+        <section class="insider-section buy-content" id="buy" style="display: none;">
+          <h2 class="section-heading">What to Buy</h2>
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <!-- Slide 1 -->
+              <div class="carousel-slide1">
+                <div class="topic-card">
+                  <h3>Seasonal Must-Haves</h3>
+                  <p>Curated picks for the current season — from essentials to statement pieces.</p>
+                  <button>Explore</button>
+                </div>
+                <div class="topic-card">
+                  <h3>Editor’s Picks</h3>
+                  <p>Hand-selected favorites by our fashion editors for every occasion.</p>
+                  <button>Explore</button>
+                </div>
+              </div>
+        
+              <!-- Slide 2 -->
+              <div class="carousel-slide1">
+                <div class="topic-card">
+                  <h3>Budget Buys</h3>
+                  <p>Style on a budget: affordable finds that don’t compromise on flair.</p>
+                  <button>Explore</button>
+                </div>
+                <div class="topic-card">
+                  <h3>Luxury Spotlight</h3>
+                  <p>Indulge in high-end fashion with our top luxury recommendations.</p>
+                  <button>Explore</button>
+                </div>
+              </div>
+        
+              <!-- Slide 3 -->
+              <div class="carousel-slide1">
+                <div class="topic-card">
+                  <h3>Trending Accessories</h3>
+                  <p>From bags to boots — the accessories that are defining the season.</p>
+                  <button>Explore</button>
+                </div>
+                <div class="topic-card">
+                  <h3>Sustainable Finds</h3>
+                  <p>Eco-conscious fashion that’s stylish and responsible.</p>
+                  <button>Explore</button>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Navigation Dots -->
+            <div class="carousel-dots">
+              <span class="dot active" onclick="moveToSlide(0)"></span>
+              <span class="dot" onclick="moveToSlide(1)"></span>
+              <span class="dot" onclick="moveToSlide(2)"></span>
+            </div>
+          </div>
+        </section>
+
+        <!--Fashion show section-->
+        <section class="insider-section" id="fashion-shows" style="display: none;">
+          <h2>Fashion Shows</h2>
+        
+          <!-- Runway Clips Gallery -->
+          <div class="runway-clips">
+            <h3>Runway Highlights</h3>
+            <div class="clips-grid">
+              <div class="clip-card">
+                <video src="videos/dior-ss25.mp4" autoplay muted loop playsinline></video>
+                <div class="clip-info">
+                  <h4>Dior SS25</h4>
+                  <p>Paris Fashion Week</p>
+                </div>
+              </div>
+          
+              <div class="clip-card">
+                <video src="videos/prada-fw25.mp4" autoplay muted loop playsinline></video>
+                <div class="clip-info">
+                  <h4>Prada FW25</h4>
+                  <p>Milan Fashion Week</p>
+                </div>
+              </div>
+          
+              <div class="clip-card">
+                <video src="videos/tomford-ss25.mp4" autoplay muted loop playsinline></video>
+                <div class="clip-info">
+                  <h4>Tom Ford SS25</h4>
+                  <p>New York Fashion Week</p>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+        
+          <!-- Fashion Week Timeline -->
+          <div class="fashion-week-timeline">
+            <h3>Upcoming Fashion Weeks</h3>
+            <div class="timeline-scroll">
+              <div class="timeline-event">
+                <span class="date">Sep 10–15</span>
+                <span class="location">New York Fashion Week</span>
+              </div>
+              <div class="timeline-event">
+                <span class="date">Sep 20–25</span>
+                <span class="location">London Fashion Week</span>
+              </div>
+              <div class="timeline-event">
+                <span class="date">Oct 1–6</span>
+                <span class="location">Paris Fashion Week</span>
+              </div>
+              <div class="timeline-event">
+                <span class="date">Oct 10–14</span>
+                <span class="location">Milan Fashion Week</span>
+              </div>
+              <div class="timeline-event">
+                <span class="date">Nov 5–9</span>
+                <span class="location">Tokyo Fashion Week</span>
+              </div>          
+            </div>
+          </div>
+        
+          <!-- Filterable Show Grid -->
+          <div class="filtered-shows">
+            <h3>Explore Shows</h3>
+        
+            <!-- Filters -->
+            <div class="filters">
+              <select id="season-filter">
+                <option value="all">All Seasons</option>
+                <option value="ss25">Spring/Summer 2025</option>
+                <option value="fw25">Fall/Winter 2025</option>
+              </select>
+        
+              <select id="city-filter">
+                <option value="all">All Cities</option>
+                <option value="paris">Paris</option>
+                <option value="milan">Milan</option>
+                <option value="newyork">New York</option>
+              </select>
+            </div>
+        
+            <!-- Grid -->
+            <div class="show-grid" id="show-grid">
+              <!-- Filtered cards will render here -->
+            </div>
+          </div>
+        </section>
+
+
+        <!--Street Style section-->
+        <section class="street-style-feature insider-section" id="street-style" style="display: none;">
+          <div class="street-style-grid-layout">
+            
+            <!-- Left Full Image -->
+            <div class="style-photo-full">
+              <img src="images/street-look1.jpg" alt="Street Style Full Look">
+            </div>
+        
+            <!-- Top Right Text -->
+            <div class="style-about-text">
+              <h4>ABOUT US</h4>
+              <h2>Comfort and Quality Come First.</h2>
+              <p>
+                Johanna Innsbruck and Linda Copperfield have always dreamed of comfortable women's clothing that would look appropriate in any circumstances.
+              </p>
+              <p>
+                This is how the Jolly House brand appeared – it is a brand for women who like to feel confident, seductive, and stylish in any situation. We use only natural fabrics and pay great attention to details that make the difference.
+              </p>
+            </div>
+        
+            <!-- Bottom Right Close-Up -->
+            <div class="style-photo-detail">
+              <img src="images/street-detail1.jpg" alt="Street Style Detail">
+            </div>
+        
+            <!-- Bottom Left Quote -->
+            <div class="style-quote">
+              <blockquote>
+                “I have always had difficulties with buying clothes for every-day wear. Therefore, together with Linda, we decided to create our own brand.”
+              </blockquote>
+              <cite>— Johanna Innsbruck</cite>
+            </div>
+        
+          </div>
+        </section>
+
+      </section>
+      
+
+    <!--
+    <div class="look-grid">
+      <div class="look-card">
+        <img src="images/look1.jpg" alt="Street Chic">
+        <h3>Street Chic</h3>
+        <p>Bold layers and statement pieces</p>
+        <button>Shop the Look</button>
+      </div>
+      <div class="look-card">
+        <img src="images/look2.jpg" alt="Soft Elegance">
+        <h3>Soft Elegance</h3>
+        <p>Pastels and flowing silhouettes</p>
+        <button>Shop the Look</button>
+      </div>
+       Add more cards -->
+    
+    </div>
+  </section>
+</body>
+</html>
